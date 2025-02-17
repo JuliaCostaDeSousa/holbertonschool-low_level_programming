@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main: print variable n sign
+ * main - print variable n sign
  * Description: print variable n sign
  * Return: 0 if succeded
  */
