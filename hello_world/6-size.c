@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - print: with proper grammar, but the outcome is a piece of art,
- * Description: print: with proper grammar, but the outcome is a piece of art,
+ * main - print size of various types
+ * Description: print size of various types
  * Return: 0 if succeded
  */
 int main(void)
