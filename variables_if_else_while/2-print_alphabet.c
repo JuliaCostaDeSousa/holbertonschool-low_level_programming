@@ -16,6 +16,7 @@ int main(void)
 		lettre++;
 		indice++;
 	}
+	putchar('\n');
 return (0);
 }
 
