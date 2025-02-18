@@ -10,7 +10,7 @@ int main(void)
 	int nombre = 48;
 	int indice = 0;
 
-	while (indice < 11)
+	while (indice < 10)
 	{
 		putchar(nombre);
 		nombre++;
@@ -21,8 +21,8 @@ int main(void)
 		}
 		else
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
 	}
 return (0);
