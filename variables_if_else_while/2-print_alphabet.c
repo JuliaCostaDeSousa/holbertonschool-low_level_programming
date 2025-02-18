@@ -12,7 +12,7 @@ int main(void)
 	int indice = 1;
 	while (indice < 27)
 	{
-		printf("%c", lettre);
+		putchar(lettre);
 		lettre++;
 		indice++;
 	}
