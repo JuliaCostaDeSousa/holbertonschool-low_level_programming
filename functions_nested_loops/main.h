@@ -1,4 +1,2 @@
-#include <unistd.h> 
-
-/* fonction _putchar */
 char _putchar(char c);
+void print_alphabet(void);
