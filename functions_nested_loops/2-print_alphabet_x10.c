@@ -16,11 +16,11 @@ void print_alphabet_x10(void)
 		int lettre = 97;
 
 		while (lettre < 123)
-        	{
-                	_putchar(lettre);
-                	lettre++;
-        	}
-	       	_putchar('\n');	
+		{
+			_putchar(lettre);
+			lettre++;
+		}
+		_putchar('\n');
 		indice++;
 	}
 }
