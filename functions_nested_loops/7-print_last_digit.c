@@ -1,24 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "6-abs.c"
 #include "main.h"
 
 /**
  * print_last_digit - prints the last digit of a number
- * @num : int 
+ * @num : int
  * Return: value of the last digit
  */
 
 int print_last_digit(int num)
 {
-	if (num < 0)
-	{
-		int num_abs = num * (-1);
-		int last_digit = (num_abs % 10);
-		return (last_digit);
-	}
-	else
-	{
-		int last_digit = (num % 10);
-		return (last_digit);
-	}
+	_putchar(_abs(num % 10) + '0');
+	return (_abs(num % 10));
 }
