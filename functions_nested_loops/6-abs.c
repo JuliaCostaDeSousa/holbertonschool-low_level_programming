@@ -4,7 +4,7 @@
 
 /**
  * _abs - computes absolute value of an integer
- *
+ * @int: value to compute
  * Return: computes absolute value of an integer
  */
 
@@ -12,9 +12,10 @@ int _abs(int)
 {
 	if (int < 0)
 	{
-		*-1
+		return (int * -1);
 	}
-
-
-
+	else
+	{
+		return (int);
+	}
 }
