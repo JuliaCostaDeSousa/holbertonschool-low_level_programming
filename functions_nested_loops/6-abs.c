@@ -4,7 +4,7 @@
 
 /**
  * _abs - computes absolute value of an integer
- * @int: value to compute
+ * @c: value to compute
  * Return: computes absolute value of an integer
  */
 
