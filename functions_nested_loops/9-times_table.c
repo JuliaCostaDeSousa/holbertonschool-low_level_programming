@@ -18,35 +18,32 @@ void times_table(void)
 
 		while (j < 10)
 		{
-			if (((i * j) < 10) && (j != 9))
+			int timetable = (i * j);
+
+			if (timetable < 10)
 			{
-				_putchar((i * j) + '0');
-				_putchar(',');
+				_putchar(timetable + '0');
+			}
+			else
+			{
+				_putchar(((timetable) / 10) + '0');
+				_putchar(((timetable) % 10) + '0');
+			}
+			if (j == 9)
+			{
+				_putchar('\n');
+			}
+			else
+			{
+				_putchar(44);
 				_putchar(32);
-				_putchar(' ');
-			}
-			else if (((i * j) < 10) && (j == 9))
-			{
-				_putchar((i * j) + '0');
-				_putchar('\n');
-			}
-			else if (((i * j) > 10) && (j != 9))
-			{
-				_putchar(((i * j) / 10) + '0');
-				_putchar(((i * j) % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else if (((i * j) > 10) && (j == 9))
-			{
-				_putchar(((i * j) / 10) + '0');
-				_putchar(((i * j) % 10) + '0');
-				_putchar('\n');
+				if ((i * (j + 1)) < 10)
+				{
+					_putchar(32);
+				}
 			}
 			j++;
 		}
 		i++;
 	}
 }
-
-
