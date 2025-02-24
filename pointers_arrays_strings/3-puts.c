@@ -29,7 +29,7 @@ void _puts(char *str)
 	len = _strlen(str);
 	increment = 0;
 
-	while (increment <= len)
+	while (increment < len)
 	{
 		_putchar(*(str + increment));
 		increment++;
