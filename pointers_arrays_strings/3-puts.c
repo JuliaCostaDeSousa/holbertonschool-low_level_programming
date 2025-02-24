@@ -7,13 +7,13 @@
   */
 int _strlen(char *s)
 {
-        int index = 0;
+	int index = 0;
 
-        while ((*(s + index) != '\0'))
-        {
-                index++;
-        }
-        return (index);
+	while ((*(s + index) != '\0'))
+	{
+		index++;
+	}
+	return (index);
 }
 
 /**
@@ -25,9 +25,10 @@ int _strlen(char *s)
 void _puts(char *str)
 {
 	int len, increment;
+
 	len = _strlen(str);
 	increment = 0;
-	
+
 	while (increment <= len)
 	{
 		_putchar(*(str + increment));
