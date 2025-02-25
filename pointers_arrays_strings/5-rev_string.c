@@ -26,24 +26,17 @@ int _strlen(char *s)
 
 void rev_string(char *s)
 {
-	char *s2 = s;
-	char *s3 = s;
-	int increment;
-       	int len = _strlen(s);
+	int index = 0;
+	int len = _strlen(s) - 1;
+	char *debut;
+	char *fin;
+	char temp;
+	
+	while (index < (len/2))
+	{
+		*debut = &s[len - index];
 
-	increment = 0;
-	while (increment <= len)
-	{
-		s2[increment] = s[increment];
-		increment++;
+		*fin = &s[index];
+		index++;	
 	}
-	increment = 0;
-	while (increment <= len)
-	{
-		*(s2 + (len - increment)) = *(s3 + increment);
-		increment++;
-	}
-	*s = *s3;
-	printf("%s\n", s);
-	printf("%s\n", s2);
 }
