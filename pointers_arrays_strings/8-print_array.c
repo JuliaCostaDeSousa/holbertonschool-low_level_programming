@@ -11,15 +11,19 @@ void print_array(int *a, int n)
 {
 	int index = 0;
 	
-	if (n >= 2)
+	for (index = 0; index <= (n - 1); index++)
 	{
-		for (index = 0; index <= (n - 2); index++)
+		if (index < (n - 1))
+			{
+				printf("%d, ", a[index]);
+			}
+		else
 		{
-			printf("%d, ", a[index]);
+			printf("%d", a[index]);
 		}
-		printf("%d\n", a[(n - 1)]);
 	}
-	
+	printf("\n");
+
 /*	else if (n < 0)
 	{
 		printf("%d\n", a[sizeof(*a)]);
