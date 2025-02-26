@@ -28,8 +28,8 @@ void rev_string(char *s)
 {
 	int index = 0;
 	int len = _strlen(s) - 1;
-	
-	while (index <= (len/2))
+
+	while (index <= (len / 2))
 	{
 		char *debut = &s[index];
 		char temp = *debut;
