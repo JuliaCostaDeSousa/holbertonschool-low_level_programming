@@ -9,14 +9,22 @@
 
 void print_array(int *a, int n)
 {
-	int index = 1;
+	int index = 0;
 	
-	if (n >= 1)
+	if (n >= 2)
 	{
-		for (index = 1; index <= (n - 1); index++)
+		for (index = 0; index <= (n - 2); index++)
 		{
-			printf("%d, ", a[index - 1]);
+			printf("%d, ", a[index]);
 		}
+		printf("%d\n", a[(n - 1)]);
 	}
-	printf("%d\n", a[n - 1]);
+	else if (n == 1)
+	{
+		printf("%d, %d", a[(n - 1)], a[n]);
+	}
+	else
+	{
+		printf("%d\n", a[n]);
+	}
 }
