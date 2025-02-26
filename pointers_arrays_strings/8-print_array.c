@@ -23,8 +23,9 @@ void print_array(int *a, int n)
 	{
 		printf("%d, %d\n", a[(n - 1)], a[n]);
 	}
-	else if (n < 0)
+/*	else if (n < 0)
 	{
 		printf("%d\n", a[sizeof(*a)]);
 	}
+	*/
 }

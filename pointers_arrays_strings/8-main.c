@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-/*	int array[5];
+	int array[5];
 
 	array[0] = 98;
 	array[1] = 402;
@@ -21,10 +21,7 @@ int main(void)
 	print_array(array, 1);
 
 	print_array(array, -1);	
-*/
-	int array[1] = { 98 }; 
+	
 
-	print_array(array, 0); 
-	print_array(array, -1);
 	return (0);
 }
