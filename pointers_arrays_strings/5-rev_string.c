@@ -28,15 +28,16 @@ void rev_string(char *s)
 {
 	int index = 0;
 	int len = _strlen(s) - 1;
-	char *debut;
-	char *fin;
-	char temp;
 	
 	while (index < (len/2))
 	{
-		*debut = &s[len - index];
+		char *debut = &s[index];
+		char temp = *debut;
+		char *fin = &s[(len - index)];
 
-		*fin = &s[index];
-		index++;	
+		temp = *debut;
+		*debut = *fin;
+		*fin = temp;
+		index++;
 	}
 }
