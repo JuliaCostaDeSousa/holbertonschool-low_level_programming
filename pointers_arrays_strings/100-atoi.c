@@ -9,52 +9,43 @@
 
 int _atoi(char *s)
 {
-	int len = 0;
-
-	while ((*(s + len) != '\0'))
-	{
-		len++;
-	}
-	
 	int index = 0;
-	int signe_moins = 0;
 	int signe_plus = 0;
+	int signe_moins = 0;
 	int num = 0;
-
-	if (len =! 0)
+	
+	for (index = 0; s[index] != '\0'; index++)
 	{
-		for (index = 0; index <= len, index++)
+		if (s[index] < 48 && s[index] > 57)
 		{
-			if (s[index] < 48 && s[index] > 57)
+			if (s[index] == '+')
 			{
-				if (s[index] == '+')
-				{
-					signe_plus ++;
-
-				}
-				else if (s[index] == '-')
-				{
-					signe_moins++;
-				}
+				signe_plus++;
 			}
-			else
+			else if (s[index] == '-')
 			{
-				char_index_start = index;
-				char_index_end = index;
-				while (s[index] >= 48 && s[index] <= 57)
-				{
-					num = num * 10 + (str[index] - 48);
-				}
-
-				if (signe_plus >= signe_moins)
-				{
-					return(num));	
-				}
-				else
-				{
-					return(0-num);
-				}
+				signe_moins++;
 			}
 		}
+		else
+		{
+			while (s[index] >= 48 && s[index] <= 57)
+			{
+				num = num * 10 + (s[index] - 48);
+				index++;
+			}
+			break;
+		}
+		break;
+	}	
+
+	if (signe_plus >= signe_moins)
+	{
+		return (num);
+	}
+	else
+	{
+		return (num * (-1));
 	}
 }
+
