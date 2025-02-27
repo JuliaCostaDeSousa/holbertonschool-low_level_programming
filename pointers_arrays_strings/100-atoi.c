@@ -23,7 +23,7 @@ int _atoi(char *s)
 		while (s[index] >= 48 && s[index] <= 57)
 		{	
 			deja_vu = 1;
-			num = num * 10 + (s[index] - 48);
+			num = num * 10 + (s[index] - '0');
 			index++;
 		}
 		if (deja_vu == 1)
