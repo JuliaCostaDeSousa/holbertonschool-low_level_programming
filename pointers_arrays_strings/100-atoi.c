@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * _atoi - converts a string to character
@@ -32,18 +33,15 @@ int _atoi(char *s)
 		}
 		index++;
 	}
+	if(num * signe >= INT_MAX) 
+	{
+		return (INT_MAX);
+	}
+	if(num * signe <= INT_MIN) 
+	{
+		return (INT_MIN);
+	}
 	num *= signe;
-	if(num >= 2147483647) 
-	{
-		return (2147483647);
-	}
-	else if(num <= -2147483648) 
-	{
-		return (-2147483648);
-	}
-	else
-	{
-		return (num);
-	}
+	return (num);
 }
 
