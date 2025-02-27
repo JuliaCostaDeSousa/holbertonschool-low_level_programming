@@ -23,7 +23,6 @@ int _atoi(char *s)
 		while (s[index] >= 48 && s[index] <= 57)
 		{	
 			deja_vu = 1;
-
 			num = num * 10 + (s[index] - 48);
 			index++;
 		}
@@ -32,6 +31,17 @@ int _atoi(char *s)
 			break;
 		}
 		index++;
+	}
+	if (num < 0) 
+	{
+        	if (signe < 0)
+            	{
+			return -2147483648;
+		}
+	 	else
+		{
+			return 2147483647;
+		}
 	}
 	num *= signe;
 return (num);
