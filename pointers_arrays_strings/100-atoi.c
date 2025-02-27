@@ -10,42 +10,31 @@
 int _atoi(char *s)
 {
 	int index = 0;
-	int signe_plus = 0;
-	int signe_moins = 0;
+	int signe = 1;
 	int num = 0;
-	
-	for (index = 0; s[index] != '\0'; index++)
+	int deja_vu = 0;
+
+	while (s[index])
 	{
-		if (s[index] < 48 && s[index] > 57)
+		if (s[index] == '-')
 		{
-			if (s[index] == '+')
-			{
-				signe_plus++;
-			}
-			else if (s[index] == '-')
-			{
-				signe_moins++;
-			}
+			signe *= -1;
 		}
-		else
+		
+		while (s[index] >= 48 && s[index] <= 57)
+		{	
+			deja_vu = 1;
+
+			num = num * 10 + (s[index] - 48);
+			index++;
+		}
+		num *= signe;
+		if (deja_vu == 1)
 		{
-			while (s[index] >= 48 && s[index] <= 57)
-			{
-				num = num * 10 + (s[index] - 48);
-				index++;
-			}
 			break;
 		}
-		break;
-	}	
-
-	if (signe_plus >= signe_moins)
-	{
-		return (num);
+		index++;
 	}
-	else
-	{
-		return (num * (-1));
-	}
+return (num);
 }
 
