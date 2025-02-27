@@ -14,13 +14,13 @@ int _atoi(char *s)
 	int num = 0;
 	int deja_vu = 0;
 
-	while (s[index])
+	while (s[index] != '\0')
 	{
 		if (s[index] == '-')
 		{
 			signe *= -1;
 		}
-		while (s[index] >= 48 && s[index] <= 57)
+		while (s[index] >= '0' && s[index] <= '9')
 		{	
 			deja_vu = 1;
 			num = num * 10 + (s[index] - '0');
@@ -32,18 +32,18 @@ int _atoi(char *s)
 		}
 		index++;
 	}
-	if (num < 0) 
-	{
-        	if (signe < 0)
-            	{
-			return -2147483648;
-		}
-	 	else
-		{
-			return 2147483647;
-		}
-	}
 	num *= signe;
-return (num);
+	if(num >= 2147483647) 
+	{
+		return (2147483647);
+	}
+	else if(num <= -2147483648) 
+	{
+		return (-2147483648);
+	}
+	else
+	{
+		return (num);
+	}
 }
 
