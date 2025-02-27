@@ -33,11 +33,11 @@ int _atoi(char *s)
 		}
 		index++;
 	}
-	if(num * signe >= INT_MAX) 
+	if((num * signe) >= INT_MAX) 
 	{
 		return (INT_MAX);
 	}
-	if(num * signe <= INT_MIN) 
+	if((num * signe) <= INT_MIN) 
 	{
 		return (INT_MIN);
 	}
