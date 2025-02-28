@@ -1,5 +1,24 @@
 #include "main.h"
 
+
+/**
+  * _strlen - returns the length of a string
+  * Description: returns the length of a string
+  * @s: string
+  * Return: length of a string
+  */
+
+int _strlen(char *s)
+{
+        int index = 0;
+
+        while ((*(s + index) != '\0'))
+        {
+                index++;
+        }
+        return (index);
+}
+
 /**
  * _strcat - concatenates two strings
  * Description: concatenates two strings
@@ -10,26 +29,12 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int len_dest = 0;
+	int len_src = _strlen(src);
 	int index = 0;
-	char *new_ptr = &src[0];
-
-	while (dest[index] != '\0')
-	{
-		len_dest++;
-	}
-	len_dest--;
-
-	new_ptr = &src[(len_dest)];
-
-	index = 0;
-
 	while (src[index] != '\0')
 	{
-	*(new_ptr + index) = src[index];
-	index++;
+		dest[len_src + index] = src[index];
+		index++;
 	}
-
-	*(new_ptr + index) = '\0';
-return (dest);
+	return (dest);
 }
