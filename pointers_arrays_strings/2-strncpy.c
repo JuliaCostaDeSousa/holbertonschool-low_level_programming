@@ -32,13 +32,13 @@ char *_strncpy(char *dest, char *src, int n)
 			index++;
 		}
 	}
-	else if (len_src <=n && src[0] == '\0')
+	else if (len_src <= n && src[0] == '\0')
 	{
 		while (index < n)
-                {
-                       	*(dest + index) = src[0];
-                        index++;
-                }
+		{
+			*(dest + index) = src[0];
+			index++;
+		}
 	}
 	else if (len_src > n)
 	{
