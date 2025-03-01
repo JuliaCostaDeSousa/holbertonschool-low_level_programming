@@ -30,7 +30,7 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	else if (len_src > n)
 	{
-		while (index < n)
+		while (src[index] != '\0' && index < n)
 		{
 			*(dest + index) = *(src + index);
 			index++;
