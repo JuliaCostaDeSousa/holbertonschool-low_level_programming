@@ -19,14 +19,18 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		len_src++;
 	}
-	if (len_src <= n && src[index] != '\0')
+	if (len_src <= n && src[0] != '\0')
 	{
-		while (index <= len_src)
+		while (index < len_src)
 		{
 			*(dest + index) = *(src + index);
 			index++;
 		}
-		dest[index] = '\0';
+		while (index < n)
+		{
+			*(dest + index) = '\0';
+			index++;
+		}
 	}
 	else if (len_src <=n && src[0] == '\0')
 	{
