@@ -24,16 +24,17 @@ int _strcmp(char *s1, char *s2)
 		len_s2++;
 	}
 
-	for (; index <= len_s1 && index <= len_s2 && *(s1 + index) == *(s2 + index); index++)
+	while (index <= len_s1 && index <= len_s2 && *(s1 + index) == *(s2 + index))
 	{
+		index++;
 	}
-	val = *(s1 + index) - *(s2 + index); 
+	val = *(s1 + index) - *(s2 + index);
 
 	if (*(s1 + index) != *(s2 + index))
 	{
 		return (val);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
