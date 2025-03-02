@@ -3,7 +3,7 @@
 
 /**
  * _atoi - converts a string to character
- * Description: converts a string to character
+ * Description: on met en abs avant de mettre le signe pour eviter l'overflow
  * @s: string
  * Return: int
  */
@@ -19,16 +19,17 @@ int _atoi(char *s)
 	{
 		if (s[index] == '-')
 		{
-			signe *= -1;
+			signe *= -1; /* on enleve le signe - */
 		}
 		if (s[index] >= '0' && s[index] <= '9')
-		{	
+		{
 			deja_vu = 1;
 			num = num * 10 - (s[index] - '0');
+			/* on rajoute le signe - avec num * 10 - (s - 0) au lieu de faire */
+			/* num * 10 + (s - 0) avec un nb qui risque l'overflow */
 		}
 		else if (deja_vu == 1)
 		{
-			
 			break;
 		}
 		index++;
@@ -36,4 +37,3 @@ int _atoi(char *s)
 	num *= signe;
 	return (num);
 }
-
