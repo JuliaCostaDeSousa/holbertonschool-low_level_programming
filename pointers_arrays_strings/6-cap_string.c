@@ -20,10 +20,6 @@ char *cap_string(char *str)
 		{
 			if (str[index_str] == sep_array[index_arr])
 			{
-				if (str[index_str] == '\t')
-				{
-					*(str + index_str) = ' ';
-				}
 				if (str[index_str + 1] >= 97 && str[index_str + 1] <= 122)
 				{
 					*(str + (index_str + 1)) -= 32;
