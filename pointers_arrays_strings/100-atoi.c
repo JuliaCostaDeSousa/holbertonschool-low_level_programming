@@ -33,9 +33,7 @@ int _atoi(char *s)
 		}
 		index++;
 	}
-	printf("num = %d\n", num);
 	num *= signe;
-	printf("num * sign = %d\n", num);
 	return (num);
 }
 
