@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int index = 0;
-	int signe = 1;
+	int signe = -1;
 	int num = 0;
 	int deja_vu = 0;
 
@@ -21,27 +21,21 @@ int _atoi(char *s)
 		{
 			signe *= -1;
 		}
-		while (s[index] >= '0' && s[index] <= '9')
+		if (s[index] >= '0' && s[index] <= '9')
 		{	
 			deja_vu = 1;
-			num = num * 10 + (s[index] - '0');
-			index++;
+			num = num * 10 - (s[index] - '0');
 		}
-		if (deja_vu == 1)
+		else if (deja_vu == 1)
 		{
+			
 			break;
 		}
 		index++;
 	}
-	if(num >= INT_MAX) 
-	{
-		return (INT_MAX);
-	}
-	if(num <= INT_MIN) 
-	{
-		return (INT_MIN);
-	}
+	printf("num = %d\n", num);
 	num *= signe;
+	printf("num * sign = %d\n", num);
 	return (num);
 }
 
