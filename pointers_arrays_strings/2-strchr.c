@@ -18,12 +18,12 @@ char *_strchr(char *s, char c)
 			return (ptr);
 		}
 		s++;
-		if (*s == '\0' || c == '\0')
-		{
-			char *ptr = s;
+	}
+	if (*s == '\0' || c == '\0')
+	{
+		char *ptr = s;
 
-			return (ptr);
-		}
+		return (ptr);
 	}
 	return (NULL);
 }
