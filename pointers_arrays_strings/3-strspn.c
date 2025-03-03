@@ -11,7 +11,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int index = 0;
-	int val = 0;
+	unsigned int val = 0;
 
 	for (; *(s + index) != '\0'; index++)
 	{
@@ -24,7 +24,10 @@ unsigned int _strspn(char *s, char *accept)
 				val++;
 				break;
 			}
+			else
+			{
+				return (val);
+			}
 		}
 	}
 }
-
