@@ -10,24 +10,33 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int index = 0;
 	unsigned int val = 0;
+	char *ptr_accept = accept;
 
-	for (; *(s + index) != '\0'; index++)
+	while (*s != '\0')
 	{
-		int index_accept = 0;
-
-		for (; *(accept + index_accept) != '\0'; index_accept++)
+		while (*accept != '\0')
 		{
-			if (*(s + index) == *(accept + index_accept))
+			if (*s == *accept)
 			{
 				val++;
+				accept = ptr_accept;
 				break;
 			}
 			else
 			{
-				return (val);
+				accept++;
 			}
+
+		}
+		if (val == 0)
+		{
+			break;
+		}
+		else
+		{
+			s++;
 		}
 	}
+	return (val);
 }
