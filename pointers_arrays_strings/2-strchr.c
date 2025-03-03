@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 	}
 	if (*s == '\0' || c == '\0')
 	{
-		char *ptr = s++;
+		char *ptr = s;
 
 		return (ptr);
 	}
