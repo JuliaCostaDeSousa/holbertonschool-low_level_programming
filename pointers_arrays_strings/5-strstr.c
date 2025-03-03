@@ -28,6 +28,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		int index_needle = 0;
 		int check = 0;
+
 		for (; index_needle < len_needle; index_needle++)
 		{
 			new_indice = index_haystack + index_needle;
