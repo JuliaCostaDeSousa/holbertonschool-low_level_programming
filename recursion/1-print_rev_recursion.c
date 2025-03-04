@@ -10,7 +10,6 @@ void _print_rev_recursion(char *s)
 {
 	if (*s == '\0')
 	{
-		_putchar('\n');
 		return;
 	}
 	_print_rev_recursion(s + 1);
@@ -19,4 +18,8 @@ void _print_rev_recursion(char *s)
 
 /*
  * on parcourt la string en faisant appel a _print_rev_recursion
- * jusqu'a ce que'on arrive au NULL byte. 
+ * jusqu'a ce que'on arrive au NULL byte. PUIS on ressort petit
+ * a petit de toutes les fonctions _print_rev_recursion (donc
+ * en partant de la fin de la string vers le debut) en printant
+ * les characters. Donc on affiche la string a l'envers
+ */
