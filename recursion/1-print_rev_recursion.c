@@ -8,18 +8,15 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *str_rev = s;
-
-	if (*str_rev != '\0')
-	{ 
-		s++;
-		_print_rev_recursion(s);
-	}
-	else
+	if (*s == '\0')
 	{
-		_putchar(*str_rev);
-		s = str_rev;
-		s++;
-		_print_rev_recursion(s);
+		_putchar('\n');
+		return;
 	}
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }
+
+/*
+ * on parcourt la string en faisant appel a _print_rev_recursion
+ * jusqu'a ce que'on arrive au NULL byte. 
