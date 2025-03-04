@@ -8,27 +8,18 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *ptr_start = s;
-	char *last = s;
+	char *str_rev = s;
 
-	if (*s != '\0')
-	{
+	if (*str_rev != '\0')
+	{ 
 		s++;
-		_putchar(*s);
 		_print_rev_recursion(s);
 	}
 	else
 	{
-		s--;
-		/*printf("s == 0 : %s\n", s);*/
-
-		*last = *s;
-
-		_putchar(*s);
-		s = ptr_start;
+		_putchar(*str_rev);
+		s = str_rev;
 		s++;
-
-		printf("s : %s\n", s);
 		_print_rev_recursion(s);
 	}
 }
