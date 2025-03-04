@@ -13,7 +13,7 @@ void _puts_recursion(char *s)
 	{
 		char *ptr = s;
 
-		printf("%c", *ptr);
+		_putchar(*ptr);
 		ptr++;
 		s = ptr;
 		_puts_recursion(s);
