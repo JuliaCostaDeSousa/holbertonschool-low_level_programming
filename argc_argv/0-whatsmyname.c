@@ -2,7 +2,8 @@
 
 /**
  * main - check the code
- *
+ * @argc: nb of argument
+ * @argv: value og argument
  * Return: Always 0.
  */
 
