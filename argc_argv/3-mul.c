@@ -7,25 +7,21 @@
  * Return: Always 0.
  */
 
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char *argv[])
 {
 	if (argc != 3)
 	{
 		printf("Error");
+		return (1);
 	}
 	else
 	{
-		int index = 1;
-		int nb = 1;
-		*argc++;
-
-		while (index < argc)
-		{
-			nb *= argv[argc];
-			*argc++;
-			index++;			
-		}
-		printf("%d\n", nb);
+		int nb1 = *argv[1];
+		int nb2 = *argv[2];
+		
+		printf("nb1 = %d\n", nb1);
+		printf("nb2 = %d\n", nb2);
+		return (nb1 * nb2);
 	}
 	return (0);
 }
