@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * check_multiple - verifie si a est un multiple de n (sauf 1 et n)
+ *
+ * @n: nombre initial
+ * @a: eventuel multiple
+ * Return: -1 si multiple, 0 ou 1 si pas de multiple
+ */
+
 int check_multiple(int n, int a)
 {
 	if (a < n)
@@ -38,7 +46,7 @@ int is_prime_number(int n)
 		int mult;
 
 		mult = check_multiple(n, 2);
-		
+
 		if (mult < 0)
 		{
 			return (0);
