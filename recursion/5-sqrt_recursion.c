@@ -1,14 +1,26 @@
 #include "main.h"
 
-int odd_number (int n, int a)
-{	
-	if ((n - a) == 0)
+/**
+ * odd_number - additionne les nombres impairs pour trouver la racine
+ *
+ * @n: nombre initial
+ * @a: nombre impair
+ * Return: incremente a tant que a != n, si a > n (pas de racine) return (-999)
+ */
+
+int odd_number(int n, int a)
+{
+	if (a < n)
 	{
-		return (a, );
+		return (1 + odd_number(n - a, a + 2));
+	}
+	else if (a == n)
+	{
+		return (1);
 	}
 	else
 	{
-		return(odd_number(a + 2);
+		return (-999);
 	}
 }
 
@@ -21,17 +33,16 @@ int odd_number (int n, int a)
 
 int _sqrt_recursion(int n)
 {
-	if ((n - odd_number(n, 1)) < 0)
+	int count;
+
+	count = odd_number(n, 1);
+
+	if (count < 0)
 	{
 		return (-1);
 	}
-	else if ((n - odd_number(n, 1)) > 0)
-	{
-
-		return (1 + _sqrt_recursion(n - odd_number(n, 1));
-	}
 	else
-	{	
-		return (0);
+	{
+		return (count);
 	}
 }
