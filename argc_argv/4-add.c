@@ -1,10 +1,6 @@
 #include "main.h"
 #include <ctype.h>
-
-int check_number(char 
-
-
-
+#include <math.h>
 
 /**
  * main - check the code
@@ -15,36 +11,34 @@ int check_number(char
 
 int main(int argc, char *argv[])
 {
+
+	int arg_nb = 1;
 	int sum = 0;
 
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 	else
 	{
-		int index = 1;
-		while (index <= argc)
+		for (; arg_nb < argc; arg_nb++)
 		{
-			printf("index = %d\n", index);
-			printf("isdigit(argv[index]) = %d", isdigit(argv[index]));
-			if (isdigit(atoi(argv[index])) == 0)
-			{
-				printf("argv[%d] = %s\n", index, argv[index]);
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				if (atoi(argv[index]) >= 0)
+			 char *arg_val = argv[arg_nb];
+			 int index = 0;
+
+			 while (*(arg_val + index) != '\0')
+			 {
+				if (*(arg_val + index) < 48 || *(arg_val + index) > 57)
 				{
-					printf("atoi(argv[%d]) = %d\n", index, atoi(argv[index]));
-					sum += atoi(argv[index]);
+					printf("Error\n");
+					return (1);
 				}
 				index++;
-			}
+			 }
+			 sum += atoi(argv[arg_nb]);
 		}
 	}
-	printf("sum = %d\n", sum);
-	return (sum);
+	printf("%d\n", sum);
+	return (0);
 }
