@@ -24,19 +24,19 @@ int main(int argc, char *argv[])
 	{
 		for (; arg_nb < argc; arg_nb++)
 		{
-			 char *arg_val = argv[arg_nb];
-			 int index = 0;
+			char *arg_val = argv[arg_nb];
+			int index = 0;
 
-			 while (*(arg_val + index) != '\0')
-			 {
+			while (*(arg_val + index) != '\0')
+			{
 				if (*(arg_val + index) < 48 || *(arg_val + index) > 57)
 				{
 					printf("Error\n");
 					return (1);
 				}
 				index++;
-			 }
-			 sum += atoi(argv[arg_nb]);
+			}
+			sum += atoi(argv[arg_nb]);
 		}
 	}
 	printf("%d\n", sum);
