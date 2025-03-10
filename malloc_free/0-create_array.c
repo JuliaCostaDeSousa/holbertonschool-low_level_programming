@@ -15,6 +15,7 @@ unsigned int index = 0;
 
 	if (size == 0)
 	{
+		printf("size = 0");
 		return (NULL);
 	}
 s = malloc(sizeof(char) * size);
