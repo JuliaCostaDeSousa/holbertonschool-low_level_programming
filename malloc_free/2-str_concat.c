@@ -15,7 +15,7 @@ unsigned int index = 0;
 
 	if ((s1 == NULL || strlen(s1) == 0) && (s2 == NULL || strlen(s2) == 0))
 	return (NULL);
-	else if ((s1 == NULL || strlen(s1) == 0) && strlen(s2) != 0)
+	if ((s1 == NULL || strlen(s1) == 0) && strlen(s2) != 0)
 	{
 		s3 = malloc(strlen(s2) + 1);
 			if (s3 == NULL)
