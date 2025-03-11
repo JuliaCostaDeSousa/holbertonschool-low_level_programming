@@ -18,10 +18,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 		if ((s1 == NULL || strlen(s1) == 0) && strlen(s2) != 0 && n != 0)
 		{
-			s3 = malloc(strlen(s2) + 1);
+			if (n < strlen(s2))
+			{
+				s3 = malloc(n + 1);
+			}
+			else
+			{
+				n = strlen(s2) + 1;
+				s3 = malloc(strlen(s2) + 1);
+			}
 			if (s3 == NULL)
 			return (NULL);
-			for (; (index <= n) || (*(s2 + index) == '\0') ; index++)
+			for (; index < n - 1; index++)
 			*(s3 + index) = *(s2 + index);
 		}
 		else if ((s2 == NULL || strlen(s2) == 0) && strlen(s1) != 0)
@@ -29,18 +37,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			s3 = malloc(strlen(s1) + 1);
 			if (s3 == NULL)
 			return (NULL);
-			for (; index < strlen(s1) + 1; index++)
+			for (; index < strlen(s1); index++)
 			*(s3 + index) = *(s1 + index);
 		}
 		else
 		{
-			s3 = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+			if (n < strlen(s2))
+			{
+				s3 = malloc(strlen(s1) + n + 1);
+			}
+			else
+			{
+				n = strlen(s2);
+				s3 = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+			}
 			if (s3 == NULL)
 			return (NULL);
 			for (; index < strlen(s1); index++)
 			*(s3 + index) = *(s1 + index);
-			for (; (index <= (strlen(s1) + n + 1)) || (index < (strlen(s1) + strlen(s2) + 1)); index++)
-			*(s3 + index) = *(s2 + (index - strlen(s1)));
+			for (; index < (strlen(s1) + n); index++)
+			{
+				*(s3 + index) = *(s2 + (index - strlen(s1)));
+			}
 		}
-	return (s3)
+	index++;
+	*(s3 + index) = '\0';
+	return (s3);
 }
