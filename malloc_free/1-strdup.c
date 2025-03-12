@@ -29,13 +29,11 @@ unsigned int index = 0;
 
 	if (_strlen(str) == 0)
 	{
-		printf("str = 0\n");
 		return (NULL);
 	}
 str_copy = malloc(_strlen(str) + 1);
 	if (str_copy == NULL)
 	{
-		printf("fail to allocate memory\n");
 		return (NULL);
 	}
 	while (index <= _strlen(str) + 1)
