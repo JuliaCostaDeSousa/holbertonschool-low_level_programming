@@ -40,8 +40,8 @@ void simple_print_buffer(int *buffer, unsigned int size)
 int main(void)
 {
     int *a;
-    int min = INT_MIN;
-    int max = INT_MAX;
+    int min = 10;
+    int max = 21;
 
     a = array_range(min, max);
     simple_print_buffer(a, (max - min + 1));
