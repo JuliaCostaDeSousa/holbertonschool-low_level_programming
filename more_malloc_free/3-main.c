@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -39,8 +40,8 @@ void simple_print_buffer(int *buffer, unsigned int size)
 int main(void)
 {
     int *a;
-    int min = 0;
-    int max = 10;
+    int min = INT_MIN;
+    int max = INT_MAX;
 
     a = array_range(min, max);
     simple_print_buffer(a, (max - min + 1));
