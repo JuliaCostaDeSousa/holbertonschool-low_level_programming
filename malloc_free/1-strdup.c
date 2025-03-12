@@ -27,7 +27,7 @@ char *_strdup(char *str)
 char *str_copy = NULL;
 unsigned int index = 0;
 
-	if (str == NULL || _strlen(str) == 0)
+	if (str == NULL || || str = "" || _strlen(str) == 0)
 	{
 		return (NULL);
 	}
