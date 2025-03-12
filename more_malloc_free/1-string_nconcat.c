@@ -36,7 +36,7 @@ unsigned int len_s2;
 	s2 = "";
 len_s1 = _strlen(s1);
 
-if (n >= _strlen(s2) + 1)
+if (n >= _strlen(s2))
 len_s2 = _strlen(s2);
 else
 len_s2 = n;
