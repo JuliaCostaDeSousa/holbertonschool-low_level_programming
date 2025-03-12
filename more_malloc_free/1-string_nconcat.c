@@ -20,6 +20,7 @@ unsigned int _strlen(char *s)
  *
  * @s1: string 1 to be appended
  * @s2: string to append
+ * @n: nb of element of s2 to append to s1
  * Return: pointer to new allocated space with s2 appended to s1
  */
 
@@ -34,12 +35,12 @@ unsigned int len_s2;
 	s1 = "";
 	if (s2 == NULL)
 	s2 = "";
-len_s1 = _strlen(s1);
 
+len_s1 = _strlen(s1);
 if (n >= _strlen(s2))
 len_s2 = _strlen(s2);
 else
-len_s2 = n - 1;
+len_s2 = n;
 
 s3 = malloc(len_s1 + len_s2 + 1);
 	if (s3 == NULL)
