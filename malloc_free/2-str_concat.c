@@ -27,37 +27,33 @@ char *str_concat(char *s1, char *s2)
 {
 char *s3 = NULL;
 unsigned int index = 0;
+unsigned int len_s1;
+unsigned int len_s2;
 
-	if ((s1 == NULL || _strlen(s1) == 0) && (s2 == NULL || _strlen(s2) == 0))
-	return (NULL);
-	if ((s1 == NULL || _strlen(s1) == 0) && _strlen(s2) != 0)
+	if (s1 == NULL)
 	{
-		s3 = malloc(_strlen(s2) + 1);
-			if (s3 == NULL)
-			return (NULL);
-			for (; index < _strlen(s2); index++)
-			*(s3 + index) = *(s2 + index);
-			*(s3 + index + 1) = '\0';
+		s1 = "";
 	}
-	else if ((s2 == NULL || _strlen(s2) == 0) && _strlen(s1) != 0)
+	if (s2 == NULL)
 	{
-		s3 = malloc(_strlen(s1) + 1);
-			if (s3 == NULL)
-			return (NULL);
-			for (; index < _strlen(s1); index++)
-			*(s3 + index) = *(s1 + index);
-			*(s3 + index + 1) = '\0';
+		s2 = "";
 	}
-	else
+len_s1 = _strlen(s1);
+len_s2 = _strlen(s2);
+
+s3 = malloc(len_s1 + len_s2 +1);
+	if (s3 == NULL)
 	{
-		s3 = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
-			if (s3 == NULL)
-			return (NULL);
-			for (; index < _strlen(s1); index++)
-			*(s3 + index) = *(s1 + index);
-			for (; index < (_strlen(s1) + _strlen(s2)); index++)
-			*(s3 + index) = *(s2 + (index - _strlen(s1)));
-			*(s3 + index + 1) = '\0';
+		return (NULL);
 	}
+	for (; index < _strlen(s1); index++)
+	{
+		*(s3 + index) = *(s1 + index);
+	}
+	for (; index < (_strlen(s1) + _strlen(s2)); index++)
+	{
+		*(s3 + index) = *(s2 + (index - _strlen(s1)));
+	}
+*(s3 + index) = '\0';
 return (s3);
 }
