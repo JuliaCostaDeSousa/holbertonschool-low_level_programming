@@ -36,10 +36,11 @@ str_copy = malloc(_strlen(str) + 1);
 	{
 		return (NULL);
 	}
-	while (index <= _strlen(str) + 1)
+	while (index < _strlen(str))
 	{
 		*(str_copy + index) = *(str + index);
 		index++;
 	}
+	*(str_copy + index + 1) = '\0';
 return (str_copy);
 }
