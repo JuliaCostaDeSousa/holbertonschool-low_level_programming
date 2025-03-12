@@ -36,7 +36,7 @@ str_copy = malloc(_strlen(str) + 1);
 	{
 		return (NULL);
 	}
-	while (index < _strlen(str))
+	while (index <= _strlen(str))
 	{
 		*(str_copy + index) = *(str + index);
 		index++;
