@@ -31,15 +31,12 @@ unsigned int len_s1;
 unsigned int len_s2;
 
 	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+	s1 = "";
 	if (s2 == NULL)
-	{
-		s2 = "";
-	}
+	s2 = "";
 len_s1 = _strlen(s1);
-if (n >= _strlen(s2))
+
+if (n >= _strlen(s2) + 1)
 len_s2 = _strlen(s2);
 else
 len_s2 = n;
