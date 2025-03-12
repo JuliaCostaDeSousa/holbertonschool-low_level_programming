@@ -39,7 +39,7 @@ len_s1 = _strlen(s1);
 if (n >= _strlen(s2))
 len_s2 = _strlen(s2);
 else
-len_s2 = n;
+len_s2 = n - 1;
 
 s3 = malloc(len_s1 + len_s2 + 1);
 	if (s3 == NULL)
