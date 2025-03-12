@@ -27,7 +27,7 @@ char *_strdup(char *str)
 char *str_copy = NULL;
 unsigned int index = 0;
 
-	if (str == NULL || _strlen(str) == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -41,6 +41,6 @@ str_copy = malloc(_strlen(str) + 1);
 		*(str_copy + index) = *(str + index);
 		index++;
 	}
-	*(str_copy + index + 1) = '\0';
+	*(str_copy + index) = '\0';
 return (str_copy);
 }
