@@ -19,18 +19,18 @@ int *array_range(int min, int max)
 
 	if (min == max)
 	{
-		ar = malloc(sizeof(int));
+		ar = malloc(sizeof(int *));
 		ar[0] = min;
 	}
 	else
 	{
-		ar = malloc(sizeof(int) * (max - min + 1));
+		ar = malloc(sizeof(int *) * (max - min + 1));
 		if (ar == NULL)
 		return (NULL);
 
 		for (; index <= (max - min + 1); index++)
 		{
-			*(ar + index) = number;
+			ar[index] = number;
 			number++;
 		}
 	}

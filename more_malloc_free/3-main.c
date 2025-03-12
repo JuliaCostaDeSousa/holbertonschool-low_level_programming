@@ -39,7 +39,7 @@ void simple_print_buffer(int *buffer, unsigned int size)
 int main(void)
 {
     int *a;
-    int min = 10;
+    int min = 0;
     int max = 10;
 
     a = array_range(min, max);
