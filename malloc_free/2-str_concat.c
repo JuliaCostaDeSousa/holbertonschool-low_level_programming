@@ -41,7 +41,7 @@ unsigned int len_s2;
 len_s1 = _strlen(s1);
 len_s2 = _strlen(s2);
 
-s3 = malloc(len_s1 + len_s2 +1);
+s3 = malloc(len_s1 + len_s2 + 1);
 	if (s3 == NULL)
 	{
 		return (NULL);
