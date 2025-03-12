@@ -15,7 +15,6 @@ unsigned int index = 0;
 
 	if (size == 0)
 	{
-		printf("size = 0");
 		return (NULL);
 	}
 s = malloc(sizeof(char) * size);
@@ -23,7 +22,7 @@ s = malloc(sizeof(char) * size);
 	{
 		return (NULL);
 	}
-	while (index <= (sizeof(char) * size))
+	while (index < (sizeof(char) * size))
 	{
 		*(s + index) = c;
 		index++;
