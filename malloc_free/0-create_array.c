@@ -23,7 +23,7 @@ s = malloc(sizeof(char) * size);
 	{
 		return (NULL);
 	}
-	while (index <= (sizeof(char) * size))
+	while (index < (sizeof(char) * size))
 	{
 		*(s + index) = c;
 		index++;
