@@ -7,6 +7,7 @@
  * @grid: the address of the two dimensional grid
  * @width: width of the grid
  * @height: height of the grid
+ *
  * Return: Nothing.
  */
 void print_grid(int **grid, int width, int height)
@@ -36,15 +37,18 @@ void print_grid(int **grid, int width, int height)
 int main(void)
 {
     int **grid;
+    int col = 1;
+    int row = 5;
 
-    grid = alloc_grid(1,6);
+    grid = alloc_grid(col, row);
     if (grid == NULL)
     {
         return (1);
     }
-    print_grid(grid, 1, 6);
+    print_grid(grid, col, row);
     printf("\n");
-    grid[4][0] = 98;
-    print_grid(grid, 1, 6);
+    grid[1][0] = 98;
+    grid[4][0] = 402;
+    print_grid(grid, col, row);
     return (0);
 }
