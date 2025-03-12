@@ -13,10 +13,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *name_copy = NULL;
 	char *owner_copy = NULL;
-	dog_t *new_dog;
+	dog_t *create_new_dog;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
+	create_new_dog = malloc(sizeof(dog_t));
+	if (create_new_dog == NULL)
 	return (NULL);
 
 	if (name == NULL)
@@ -27,9 +27,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	name_copy = name;
 	owner_copy = owner;
 
-	new_dog->name = name_copy;
-	new_dog->age = age;
-	new_dog->owner = owner_copy;
+	create_new_dog->name = name_copy;
+	create_new_dog->age = age;
+	create_new_dog->owner = owner_copy;
 
-	return (new_dog);
+	return (create_new_dog);
 }
