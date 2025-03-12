@@ -5,16 +5,16 @@
   * @s: string
   * Return: length of a string
   */
- unsigned int _strlen(char *s)
- {
-	 unsigned int index = 0;
- 
-	 while ((*(s + index) != '\0'))
-	 {
-		 index++;
-	 }
-	 return (index);
- }
+unsigned int _strlen(char *s)
+{
+	unsigned int index = 0;
+
+	while ((*(s + index) != '\0'))
+	{
+		index++;
+	}
+	return (index);
+}
 /**
  * str_concat - concatenates two strings
  *
