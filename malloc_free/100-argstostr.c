@@ -5,9 +5,9 @@
   * @s: string
   * Return: length of a string
   */
-unsigned int _strlen(char *s)
+int _strlen(char *s)
 {
-	unsigned int index = 0;
+	int index = 0;
 
 	while ((*(s + index) != '\0'))
 	{
@@ -24,7 +24,7 @@ unsigned int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int index, arg_nb, len_arg, index_arg, total_len = 0;
+	int index = 0, arg_nb, len_arg, index_arg, total_len = 0;
 	char *ptr;
 
 	if (ac == 0 || av == NULL)
@@ -34,7 +34,9 @@ char *argstostr(int ac, char **av)
 	{
 		total_len += _strlen(av[arg_nb]);
 	}
-	total_len += ac;
+	if (total_len == _strlen(av[0]) && ac > 2)
+	return (NULL);
+	total_len += ac + 1;
 
 	ptr = malloc(total_len);
 	if (ptr == NULL)
@@ -42,6 +44,11 @@ char *argstostr(int ac, char **av)
 
 	for (arg_nb = 0; arg_nb < ac; arg_nb++)
 	{
+		if (av[arg_nb] == NULL)
+		{
+			free(ptr);
+			return (NULL);
+		}
 		len_arg = _strlen(av[arg_nb]);
 		index_arg = 0;
 		while (index_arg < len_arg)
