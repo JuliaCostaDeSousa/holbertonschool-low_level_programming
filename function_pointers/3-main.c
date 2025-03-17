@@ -2,7 +2,8 @@
 
 /**
  * main - check the code
- *
+ * @argc: number of arguments
+ * @argv: array of arguments
  * Return: Always 0.
  */
 
@@ -12,22 +13,22 @@ int main(int argc, char *argv[])
 	char *op;
 
 	if (argc != 4)
-	{	
+	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	op = argv[2];
 	if (strcmp(op, "+") != 0 && strcmp(op, "-") != 0 && strcmp(op, "*") != 0 &&
-    strcmp(op, "/") != 0 && strcmp(op, "%") != 0)	
-	{	
+	strcmp(op, "/") != 0 && strcmp(op, "%") != 0)
+	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
 	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && atoi(argv[3]) == 0)
-	{	
+	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 
 	num1 = atoi(argv[1]);
