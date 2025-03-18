@@ -11,6 +11,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int index = 0;
 	va_list ap;
 
+	if (n == 0)
+	return;
+
 	va_start(ap, n);
 	while (index < n - 1)
 	{
