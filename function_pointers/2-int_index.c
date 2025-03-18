@@ -18,7 +18,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	ptr_f = cmp;
 
-	if (ptr_f == NULL)
+	if (ptr_f == 0)
 	return (-1);
 
 	while (index < size)
