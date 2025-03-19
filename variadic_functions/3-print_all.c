@@ -16,7 +16,21 @@ void check_case_exist(int check, const char * const format, int index)
 					printf("\n");
 					break;
 				default:
-					printf(", ");
+					switch (*(format + index + 1))
+					{
+						case 'c':
+							printf(", ");
+							break;
+						case 'i':
+							printf(", ");
+							break;
+						case 'f':
+							printf(", ");
+							break;
+						case 's':
+							printf(", ");
+							break;
+					};
 			}
 			break;
 	}
