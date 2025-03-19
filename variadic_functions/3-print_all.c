@@ -7,16 +7,18 @@
  */
 void check_case_exist(int check, const char * const format, int index)
 {
-	if (check == 1)
+	switch (check)
 	{
-		switch (*(format + index + 1))
-		{
-			case '\0':
-				printf("\n");
-				break;
-			default:
-				printf(", ");
-		}
+		case 1:
+			switch (*(format + index + 1))
+			{
+				case '\0':
+					printf("\n");
+					break;
+				default:
+					printf(", ");
+			}
+			break;
 	}
 }
 
@@ -28,8 +30,7 @@ void check_case_exist(int check, const char * const format, int index)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int index = 0;
-	int check = 1;
+	int index = 0, check = 1;
 	char *string;
 
 	if (format == NULL)
