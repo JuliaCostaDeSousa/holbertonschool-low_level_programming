@@ -41,26 +41,28 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 	while (*(format + index) != '\0')
 	{
-		check = 1;
+		check = 0;
 		switch (*(format + index))
 		{
 			case 'c':
+				check = 1;
 				printf("%c", va_arg(ap, int));
 				break;
 			case 'i':
+				check = 1;
 				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
+				check = 1;
 				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
+				check = 1;
 				string = va_arg(ap, char*);
 				if (string == NULL)
 				string = "(nil)";
 				printf("%s", string);
 				break;
-			default:
-				check = 0;
 		}
 		check_case_exist(check, format, index);
 		index++;
