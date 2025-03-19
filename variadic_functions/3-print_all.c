@@ -7,32 +7,40 @@
  */
 void check_case_exist(int check, const char * const format, int index)
 {
+	int other = 0;
+
 	switch (check)
 	{
 		case 1:
-			switch (*(format + index + 1))
+			index++;
+			while (*(format + index) != '\0')
 			{
-				case '\0':
+				switch (*(format + index))
+				{
+					case 'c':
+						other = 1;
+						break;
+					case 'i':
+						other = 1;
+						break;
+					case 'f':
+						other = 1;
+						break;
+					case 's':
+						other = 1;
+						break;
+				};
+				index++;
+			}
+			switch (other)
+			{
+				case 0:
 					printf("\n");
 					break;
-				default:
-					switch (*(format + index + 1))
-					{
-						case 'c':
-							printf(", ");
-							break;
-						case 'i':
-							printf(", ");
-							break;
-						case 'f':
-							printf(", ");
-							break;
-						case 's':
-							printf(", ");
-							break;
-					};
+				case 1:
+					printf(", ");
+					break;
 			}
-			break;
 	}
 }
 
