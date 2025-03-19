@@ -32,6 +32,11 @@ void print_all(const char * const format, ...)
 	int check = 1;
 	char *string;
 
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 	va_start(ap, format);
 	while (*(format + index) != '\0')
 	{
