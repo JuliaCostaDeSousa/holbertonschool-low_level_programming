@@ -34,9 +34,6 @@ void check_case_exist(int check, const char * const format, int index)
 			}
 			switch (other)
 			{
-				case 0:
-					printf("\n");
-					break;
 				case 1:
 					printf(", ");
 					break;
@@ -90,4 +87,5 @@ void print_all(const char * const format, ...)
 		index++;
 	}
 	va_end(ap);
+	printf("\n");
 }
