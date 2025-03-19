@@ -23,11 +23,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	while (index < size)
 	{
-		if (ptr_f(array[index]) == 0)
-		index++;
-		else
+		if (ptr_f(array[index]) != 0)
 		return (index);
+		index++;
 	}
-
 	return (-1);
 }
