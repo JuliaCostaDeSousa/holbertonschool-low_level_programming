@@ -10,20 +10,17 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int (*ptr_f)(int);
 	int index = 0;
 
 	if (size <= 0)
 	return (-1);
 
-	if (cmp == NULL)
+	if (cmp == NULL || array == NULL)
 	return (-1);
-
-	ptr_f = cmp;
 
 	while (index < size)
 	{
-		if (ptr_f(array[index]) != 0)
+		if (cmp(array[index]) != 0)
 		return (index);
 		index++;
 	}
