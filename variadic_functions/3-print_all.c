@@ -1,40 +1,25 @@
 #include "variadic_functions.h"
 /**
- *
- *
+ * check_case_exist - check if case exist and print separator
+ * @check: check
+ * @format: format
+ * @index: index
  */
-
-int compare_strings(char *s1, char *s2)
+void check_case_exist(int check, const char * const format, int index)
 {
-	int count = 0;
-	int len_s1 = 0, len_s2 = 0;
-
-	for 
-
-
-
-
-}
-
-
-
-
-/**
-  * _strlen - returns the length of a string
-  * Description: returns the length of a string
-  * @s: string
-  * Return: length of a string
-  */
-int _strlen(char *s)
-{
-	int index = 0;
-
-	while ((*(s + index) != '\0'))
+	if (check == 1)
 	{
-		index++;
+		switch (*(format + index + 1))
+		{
+			case '\0':
+				printf("\n");
+				break;
+			default:
+				printf(", ");
+		}
 	}
-	return (index);
 }
+
 /**
  * print_all - prints anything
  * @format: list of types of arguments passed to the function
@@ -43,16 +28,36 @@ int _strlen(char *s)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int index_format = 0;
-	char *format_ref;
-	int len_format_ref = 0, len_format_passed = 0, count = 0;
+	int index = 0;
+	int check = 1;
+	char *string;
 
-	format_ref = "cifs";
-	len_format_ref = _strlen(format_ref);
-
-	while (
-
-	va_start(ap, len();
-
-
+	va_start(ap, format);
+	while (*(format + index) != '\0')
+	{
+		check = 1;
+		switch (*(format + index))
+		{
+			case 'c':
+				printf("%c", va_arg(ap, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(ap, double));
+				break;
+			case 's':
+				string = va_arg(ap, char*);
+				if (string == NULL)
+				string = "(nil)";
+				printf("%s", string);
+				break;
+			default:
+				check = 0;
+		}
+		check_case_exist(check, format, index);
+		index++;
+	}
+	va_end(ap);
 }
