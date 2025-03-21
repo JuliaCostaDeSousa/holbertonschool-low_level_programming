@@ -45,16 +45,16 @@ The learning objectives of this project are to understand :
 
   * `0-sum_them_all.c` : returns the sum of all its parameters
 	* **Prototype** : `int sum_them_all(const unsigned int n, ...);`
-  * ⚠️ **Instructions :**
-	* If n == 0, return 0.
+    * ⚠️ **Instructions :**
+	  * If n == 0, return 0.
 
 * ✅ **1. To be is to be the value of a variable**
 
   * `1-print_numbers.c` : write a function that prints numbers, followed by a new line
     * **Prototype** : `void print_numbers(const char *separator, const unsigned int n, ...);`
-	* where `separator` is the string to be printed between numbers
-    * and `n` is the number of integers passed to the function
-  * ⚠️ **Instructions :**
+	  * where `separator` is the string to be printed between numbers
+      * and `n` is the number of integers passed to the function
+    * ⚠️ **Instructions :**
       * You are allowed to use printf
       * If separator is `NULL`, don’t print it
       * Print a new line at the end of your function
@@ -80,7 +80,7 @@ The learning objectives of this project are to understand :
 	  * c: char
 	  * i: integer
 	  * f: float
-	  * s: char * (if the string is NULL, print (nil) instead
+	  * s: char * (if the string is NULL, print (nil) instead)
       * any other char should be ignored
   * ⚠️ **Instructions :**
       * You are not allowed to use for, goto, ternary operator, else, do ... while
