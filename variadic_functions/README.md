@@ -45,7 +45,7 @@ The learning objectives of this project are to understand :
 
   * `0-sum_them_all.c` : returns the sum of all its parameters
 	* **Prototype** : `int sum_them_all(const unsigned int n, ...);`
-	* If n == 0, return 0.
+	* ⚠️If n == 0, return 0.
 
 * ✅ **1. To be is to be the value of a variable**
 
@@ -53,9 +53,9 @@ The learning objectives of this project are to understand :
     * **Prototype** : `void print_numbers(const char *separator, const unsigned int n, ...);`
     * where separator is the string to be printed between numbers
     * and n is the number of integers passed to the function
-    * You are allowed to use printf
-    * If separator is NULL, don’t print it
-    * Print a new line at the end of your function
+    * ⚠️You are allowed to use printf
+    * ⚠️If separator is NULL, don’t print it
+    * ⚠️Print a new line at the end of your function
 
 * ✅ **2. One woman's constant is another woman's variable**
 
@@ -63,10 +63,10 @@ The learning objectives of this project are to understand :
     * **Prototype** : `void print_strings(const char *separator, const unsigned int n, ...);`
 	* where separator is the string to be printed between the strings
 	* and n is the number of strings passed to the function
-	* You are allowed to use printf
-	* If separator is NULL, don’t print it
-	* If one of the string is NULL, print (nil) instead
-	* Print a new line at the end of your function
+	* ⚠️You are allowed to use printf
+	* ⚠️If separator is NULL, don’t print it
+	* ⚠️If one of the string is NULL, print (nil) instead
+	* ⚠️Print a new line at the end of your function
 
 
 * ✅ **3. To be is a to be the value of a variable**
@@ -78,14 +78,14 @@ The learning objectives of this project are to understand :
 	  * i: integer
 	  * f: float
 	  * s: char * (if the string is NULL, print (nil) instead
-      * any other char should be ignored
-    * You are not allowed to use for, goto, ternary operator, else, do ... while
-    * You can use a maximum of
+      * ⚠️any other char should be ignored
+    * ⚠️You are not allowed to use for, goto, ternary operator, else, do ... while
+    * ⚠️You can use a maximum of
 	  * 2 while loops
 	  * 2 if
-	* You can declare a maximum of 9 variables
-	* You are allowed to use printf
-	* Print a new line at the end of your function
+	* ⚠️You can declare a maximum of 9 variables
+	* ⚠️You are allowed to use printf
+	* ⚠️Print a new line at the end of your function
 
 #### Optionnal
 
