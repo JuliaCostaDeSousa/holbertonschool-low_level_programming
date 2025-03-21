@@ -7,7 +7,7 @@
 
 void printf_char(va_list ap)
 {
-	printf("%c", va_arg(ap, char));
+	printf("%c", (char)va_arg(ap, int));
 }
 /**
  * printf_int - prints int type
@@ -32,12 +32,14 @@ void printf_float(va_list ap)
  */
 void printf_string(va_list ap)
 {
-	if (va_arg(ap, char*) =! NULL)
+	char *string = va_arg(ap, char*);
+
+	if (string == NULL)
 	{
-		printf("(nil)")
+		printf("(nil)");
 		return;
 	}
-	printf("%s", va_arg(ap, char*));
+	printf("%s", string);
 }
 
 /**
@@ -59,12 +61,12 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(ap, format);
-	while (format != NULL && *(format + index) != '\0')
+	while (format != NULL && *(format + index_format) != '\0')
 	{
 		index_types = 0;
 		while (types_list[index_types].type != NULL)
 		{
-			if (types_list[index_types].type == *(format + index))
+			if (*types_list[index_types].type == *(format + index_format))
 			{
 				printf("%s", separator);
 				types_list[index_types].printf_function(ap);
@@ -72,7 +74,7 @@ void print_all(const char * const format, ...)
 			}
 			index_types++;
 		}
-		index++;
+		index_format++;
 	}
 	printf("\n");
 	va_end(ap);
