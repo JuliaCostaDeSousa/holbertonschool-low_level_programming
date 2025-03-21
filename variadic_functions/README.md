@@ -36,10 +36,10 @@ The learning objectives of this project are to understand :
 
 * **0. Beauty is variable, ugliness is constant**
 
-  * `0-sum_them_all.c`
-	* **Prototype** : int sum_them_all(const unsigned int n, ...);
-	* Returns the sum of all its parameters
-	* [!TIP] If n == 0, return 0
+  * `0-sum_them_all.c` : returns the sum of all its parameters
+	* **Prototype** : `int sum_them_all(const unsigned int n, ...);`
+	* > [!TIP] 
+	  > If n == 0, return 0
 
 * **1. To be is to be the value of a variable**
 
