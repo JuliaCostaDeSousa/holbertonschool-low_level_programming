@@ -35,7 +35,18 @@ The learning objectives of this project are to understand :
 
 ### Header file
 
-* `variadic_functions.h` : 
+* [variadic_functions.h](./variadic_functions.h): header file containing definitions and prototypes for all types and functions written in the project.
+
+| File                     | Definition/Prototype                                                    |
+| ------------------------ | ----------------------------------------------------------------------- |
+| `0-sum_them_all.c`       | `int sum_them_all(const unsigned int n, ...);`                          |
+| `1-print_numbers.c`      | `void print_numbers(const char *separator, const unsigned int n, ...);` |
+| `2-print_strings.c`      | `void print_strings(const char *separator, const unsigned int n, ...);` |
+| `3-print_all.c`          | `void print_all(const char * const format, ...);`                       |
+| `struct type`            | <ul><li>`char *type`</li>												 |
+|                          | <li>`void (*printf_function)(va_list list)`</li></ul>                   |
+| `typedef type_t`         | `struct type`                                                           |
+
 
 ### Tasks
 
@@ -44,14 +55,14 @@ The learning objectives of this project are to understand :
 * ✅ **0. Beauty is variable, ugliness is constant**
 
   * [0-sum_them_all.c](./0-sum_them_all.c) : returns the sum of all its parameters
-	* **Prototype** : `int sum_them_all(const unsigned int n, ...);`
+	* 🛠️ **Prototype** : `int sum_them_all(const unsigned int n, ...);`
     * ⚠️ **Instructions :**
 	  * If n == 0, return 0.
 
 * ✅ **1. To be is to be the value of a variable**
 
   * [1-print_numbers.c](./1-print_numbers.c)  : write a function that prints numbers, followed by a new line
-    * **Prototype** : `void print_numbers(const char *separator, const unsigned int n, ...);`
+    * 🛠️ **Prototype** : `void print_numbers(const char *separator, const unsigned int n, ...);`
 	  * where `separator` is the string to be printed between numbers
       * and `n` is the number of integers passed to the function
     * ⚠️ **Instructions :**
@@ -62,7 +73,7 @@ The learning objectives of this project are to understand :
 * ✅ **2. One woman's constant is another woman's variable**
 
   * [2-print_strings.c](./2-print_strings.c)  : write a function that prints strings, followed by a new line
-    * **Prototype** : `void print_strings(const char *separator, const unsigned int n, ...);`
+    * 🛠️ **Prototype** : `void print_strings(const char *separator, const unsigned int n, ...);`
 	  * where separator is the string to be printed between the strings
 	  * and n is the number of strings passed to the function
     * ⚠️ **Instructions :**
@@ -75,7 +86,7 @@ The learning objectives of this project are to understand :
 * ✅ **3. To be is a to be the value of a variable**
 
   * [3-print_all.c](./3-print_all.c)  : write a function that prints anything
-    * **Prototype** : `void print_all(const char * const format, ...);`
+    * 🛠️ **Prototype** : `void print_all(const char * const format, ...);`
 	  * where format is a list of types of arguments passed to the function
 	    * c: char
 	    * i: integer

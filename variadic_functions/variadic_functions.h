@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * struct op - Struct op
+ * struct type - Struct type
  *
  * @op: The operator
  * @f: The function associated
@@ -14,8 +14,6 @@ typedef struct type
 	char *type;
 	void (*printf_function)(va_list list);
 } type_t;
-
-
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
