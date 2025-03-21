@@ -143,11 +143,11 @@ The `const` qualifier ensures immutability, preventing unintended modifications 
 
 * System : Ubuntu 20.04 LTS
 
-* Compiler : gcc
+* Compiler : `gcc`
 
-* Compilation options : -Wall -Werror -Wextra -pedantic -std=gnu89
+* Compilation options : `-Wall -Werror -Wextra -pedantic -std=gnu89`
 
-* Coding style : Betty style coding (betty-style.pl, betty-doc.pl)
+* Coding style : Betty style (betty-style.pl, betty-doc.pl)
 
 **If you want to check if Betty style is respected, you need to :**
 
