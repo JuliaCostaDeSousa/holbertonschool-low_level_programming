@@ -2,10 +2,10 @@
 
 Table of contents
 
-* Learning objectives
-* Scripts(#scripts)
-	* Header file(#header file)
-	* Tasks(#tasks)
+* [Learning objectives](#learningobjectives)
+* [Scripts](#scripts)
+	* [Header file](#headerfile)
+	* [Tasks](#tasks)
 
 	  * **0. Beauty is variable, ugliness is constant()**
 
