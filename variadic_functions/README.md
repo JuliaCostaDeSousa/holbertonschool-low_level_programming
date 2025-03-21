@@ -151,7 +151,7 @@ The `const` qualifier ensures immutability, preventing unintended modifications 
 
 **If you want to check if Betty style is respected, you need to :**
 
-* Go to the Betty repository
+* Go to the Betty repository (https://github.com/hs-hq/Betty)
 
 * Clone the repo to your local machine
 
