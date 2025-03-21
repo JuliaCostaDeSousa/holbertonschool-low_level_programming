@@ -101,7 +101,7 @@ The learning objectives of this project are to understand :
 	  * You are allowed to use printf
 	  * Print a new line at the end of your function
 
- >* [3-print_all_switch.c](./3-print_all_switch.c) : same purpose as `3-print_all.c` but do not use switch instead of structure for choosing the right type to print 
+> * [3-print_all_switch.c](./3-print_all_switch.c) : same purpose as `3-print_all.c` but do not use switch instead of structure for choosing the right type to print 
 
 
 
