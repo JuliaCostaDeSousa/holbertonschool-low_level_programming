@@ -36,19 +36,22 @@ The learning objectives of this project are to understand :
 
 * **0. Beauty is variable, ugliness is constant**
 
-  * `0-sum_them_all.c` : 
+  * `0-sum_them_all.c`
+	* **Prototype** : int sum_them_all(const unsigned int n, ...);
+	* Returns the sum of all its parameters
+	* [!TIP] If n == 0, return 0
 
 * **1. To be is to be the value of a variable**
 
-  * `1-print_numbers.c` : 
+  * `1-print_numbers.c`
 
 * **2. One woman's constant is another woman's variable**
 
-  * `2-print_strings.c` : 
+  * `2-print_strings.c`
 
 * **3. To be is a to be the value of a variable**
 
-  * `3-print_all.c` : 
+  * `3-print_all.c`
 
 
 
