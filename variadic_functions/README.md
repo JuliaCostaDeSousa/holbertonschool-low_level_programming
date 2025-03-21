@@ -92,7 +92,7 @@ The learning objectives of this project are to understand :
 * ❌ **4. Real programmers can write assembly code in any language**
 
   * `100-hello_world.asm` : write a 64-bit program in assembly that prints Hello, World, followed by a new line.
-  * You are only allowed to use the system call write (use int or syscall, not a call)
+  * ⚠️You are only allowed to use the system call write (use int or syscall, not a call)
   * Your program will be compiled using nasm and gcc (as follows)
   * ❗Note: GCC may display an error because it will soon remove this functionality from its environment. You can try to compile with
 
