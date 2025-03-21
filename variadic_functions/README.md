@@ -43,8 +43,7 @@ The learning objectives of this project are to understand :
 | `1-print_numbers.c`      | `void print_numbers(const char *separator, const unsigned int n, ...);` |
 | `2-print_strings.c`      | `void print_strings(const char *separator, const unsigned int n, ...);` |
 | `3-print_all.c`          | `void print_all(const char * const format, ...);`                       |
-| `struct type`            | <li>`char *type`</li>												     |
-|                          | <li>`void (*printf_function)(va_list list)`</li>                        |
+| `struct type`            | <ul><li>`char *type`</li><li>`void (*printf_function)(va_list list)`</li></ul>                      |
 | `typedef type_t`         | `struct type`                                                           |
 
 
