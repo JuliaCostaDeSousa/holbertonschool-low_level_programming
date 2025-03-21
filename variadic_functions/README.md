@@ -22,12 +22,13 @@ A project focused on understanding and implementing variadic functions in C, usi
 
 		  * **4. Real programmers can write assembly code in any language** (#4️⃣-real-programmers-can-write-assembly-code-in-any-language)
 
-	* [Main files](#-Main-files)
+		* [Main files](#-Main-files)
 
-		* **Files**
-	* [Compilation](#-Compilation)
-	  * [Requirements](#-Requirements)
-	  * [Compilation command](#-Compilation-command)
+		  * **Files**
+
+* [Compilation](#-Compilation)
+	* [Requirements](#-Requirements)
+	* [Compilation command](#-Compilation-command)
 
 
 ## 🎯 Learning objectives
