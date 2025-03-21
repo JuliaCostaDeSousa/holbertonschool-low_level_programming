@@ -39,7 +39,6 @@ The learning objectives of this project are to understand :
   * `0-sum_them_all.c` : returns the sum of all its parameters
 	* **Prototype** : `int sum_them_all(const unsigned int n, ...);`
 	* [!TIP]
-
 	  If n == 0, return 0
 
 * **1. To be is to be the value of a variable**
