@@ -139,7 +139,7 @@ The `const` qualifier ensures immutability, preventing unintended modifications 
 
 ### Requirements
 
-General requirements :
+**General requirements :**
 
 * System : Ubuntu 20.04 LTS
 
@@ -149,7 +149,7 @@ General requirements :
 
 * Coding style : Betty style coding (betty-style.pl, betty-doc.pl)
 
-If you want to check if Betty style is respected, you need to :
+**If you want to check if Betty style is respected, you need to :**
 
 * Go to the Betty repository
 
