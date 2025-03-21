@@ -63,8 +63,8 @@ The learning objectives of this project are to understand :
 
   * `2-print_strings.c` : write a function that prints strings, followed by a new line
     * **Prototype** : `void print_strings(const char *separator, const unsigned int n, ...);`
-	* where separator is the string to be printed between the strings
-	* and n is the number of strings passed to the function
+	  * where separator is the string to be printed between the strings
+	  * and n is the number of strings passed to the function
   * ⚠️ **Instructions :**
 	  * You are allowed to use printf
 	  * If separator is NULL, don’t print it
@@ -76,12 +76,12 @@ The learning objectives of this project are to understand :
 
   * `3-print_all.c` : write a function that prints anything
     * **Prototype** : `void print_all(const char * const format, ...);`
-	* where format is a list of types of arguments passed to the function
-	  * c: char
-	  * i: integer
-	  * f: float
-	  * s: char * (if the string is NULL, print (nil) instead)
-      * any other char should be ignored
+	  * where format is a list of types of arguments passed to the function
+	    * c: char
+	    * i: integer
+	    * f: float
+	    * s: char * (if the string is NULL, print (nil) instead)
+        * any other char should be ignored
   * ⚠️ **Instructions :**
       * You are not allowed to use for, goto, ternary operator, else, do ... while
       * You can use a maximum of
