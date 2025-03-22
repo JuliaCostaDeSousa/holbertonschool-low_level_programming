@@ -24,7 +24,7 @@ A project focused on understanding and implementing variadic functions in C, usi
 
 		* [Main files](#-Main-files)
 
-		  * Files
+		  * [Files](#Files)
 
 * [Compilation](#-Compilation)
 	* [Requirements](#-Requirements)
