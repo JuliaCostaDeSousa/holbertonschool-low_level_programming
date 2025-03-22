@@ -149,7 +149,7 @@ The `const` qualifier ensures immutability, preventing unintended modifications 
 
 * Coding style : Betty style (betty-style.pl, betty-doc.pl)
 
-**If you want to check if Betty style is respected, you need to :**
+**If you want to check if Betty coding style is respected, you need to :**
 
 * Go to the Betty repository (https://github.com/hs-hq/Betty)
 
