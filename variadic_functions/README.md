@@ -195,7 +195,7 @@ To compile any of the scripts, use `gcc` with the following command:
 
 `gcc -Wall -Werror -Wextra -pedantic file_name.c -o output_file`
 
-For example, to compile 0-sum_them_all.c:
+For example, to compile `0-sum_them_all.c`:
 
 `gcc -Wall -Werror -Wextra -pedantic 0-main.c 0-sum_them_all.c -o sum_them_all
 ./sum_them_all`
