@@ -118,7 +118,7 @@ The `const` qualifier ensures immutability, preventing unintended modifications 
 	  * You are allowed to use printf
 	  * Print a new line at the end of your function
 
->   * 📄 **File :** [3-print_all_switch.c](./3-print_all_switch.c) : same purpose as `3-print_all.c` but use `switch` instead of `structure` for choosing the right type to print 
+>    * 📄 **File :** [3-print_all_switch.c](./3-print_all_switch.c) : same purpose as `3-print_all.c` but use `switch` instead of `structure` for choosing the right type to print 
 
 
 
