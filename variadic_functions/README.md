@@ -10,17 +10,17 @@ A project focused on understanding and implementing variadic functions in C, usi
 	* [Tasks scripts](#-Tasks-scripts)
 		* [Mandatory](#-Mandatory)
 
-		  * **0. Beauty is variable, ugliness is constant()**(#0️⃣-beauty-is-variable-ugliness-is-constant)
+		  * [**0. Beauty is variable, ugliness is constant()**](#0️⃣-beauty-is-variable-ugliness-is-constant)
 
-	      * **1. To be is to be the value of a variable** (#1️⃣-to-be-is-to-be-the-value-of-a-variable)
+	      * [**1. To be is to be the value of a variable**](#1️⃣-to-be-is-to-be-the-value-of-a-variable)
 
-	      * **2. One woman's constant is another woman's variable** (#2️⃣-one-womans-constant-is-another-womans-variable)
+	      * [**2. One woman's constant is another woman's variable**](#2️⃣-one-womans-constant-is-another-womans-variable)
 
-	      * **3. To be is a to be the value of a variable** (#3️⃣-to-be-is-a-to-be-the-value-of-a-variable)
+	      * [**3. To be is a to be the value of a variable**](#3️⃣-to-be-is-a-to-be-the-value-of-a-variable)
 
 		* [Advanced](#-Advanced)
 
-		  * **4. Real programmers can write assembly code in any language** (#4️⃣-real-programmers-can-write-assembly-code-in-any-language)
+		  * [**4. Real programmers can write assembly code in any language**](#4️⃣-real-programmers-can-write-assembly-code-in-any-language)
 
 		* [Main files](#-Main-files)
 
