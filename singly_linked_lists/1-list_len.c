@@ -12,7 +12,7 @@ size_t list_len(const list_t *h)
 
 	if (h == NULL)
 	return (0);
-	
+
 	if (h->str == NULL)
 	{
 		h = h->next;
