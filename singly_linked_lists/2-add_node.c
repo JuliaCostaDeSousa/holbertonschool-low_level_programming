@@ -30,6 +30,9 @@ list_t *add_node(list_t **head, const char *str)
 	char *str_copy;
 	list_t *new_list;
 
+	if (h == NULL)
+	return (NULL);
+
 	if (str == NULL)
 	return (NULL);
 	len_str = _strlen(str);

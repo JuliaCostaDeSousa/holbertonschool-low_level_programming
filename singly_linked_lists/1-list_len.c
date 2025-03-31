@@ -10,6 +10,9 @@ size_t list_len(const list_t *h)
 {
 	int node_number = 0;
 
+	if (h == NULL)
+	return (0);
+	
 	if (h->str == NULL)
 	{
 		h = h->next;
