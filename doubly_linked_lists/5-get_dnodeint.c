@@ -14,14 +14,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	if (head == NULL)
 	return (NULL);
 
-	while (head->next != NULL && node_nb != index)
+	while (head != NULL && node_nb < index)
 	{
 		head = head->next;
 		node_nb++;
 	}
-
-	if (head->next == NULL)
+	if (head == NULL)
 	return (NULL);
-	else
+
 	return (head);
 }
