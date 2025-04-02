@@ -63,7 +63,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (*h == NULL || idx == 0 || node_nb == 0)
 	return (add_dnodeint(h, n));
-	
+
 	if (node_nb == idx)
 	return (add_dnodeint_end(h, n));
 	if (idx > node_nb)
