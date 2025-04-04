@@ -46,26 +46,28 @@ int main(int argc, char *argv[])
 
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
-		print_RW_error("Error: Can't read from file ", file_from, 98);
+	print_RW_error("Error: Can't read from file ", file_from, 98);
 
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
-		print_RW_error("Error: Can't write to ", file_to, 99);
+	print_RW_error("Error: Can't write to ", file_to, 99);
 
 	while ((bytesRead = read(fd1, buffer, sizeof(buffer))) > 0)
 	{
+		if (bytesRead == -1)
+		print_RW_error("Error: Can't read from file ", file_from, 98);
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
-			print_RW_error("Error: Can't write to ", file_to, 99);
+		print_RW_error("Error: Can't write to ", file_to, 99);
 	}
 
 	if (bytesRead == -1)
-		print_RW_error("Error: Can't read from file ", file_from, 98);
+	print_RW_error("Error: Can't read from file ", file_from, 98);
 
 	if (close(fd1) == -1)
-		print_close_error(fd1, 100);
+	print_close_error(fd1, 100);
 	if (close(fd2) == -1)
-		print_close_error(fd2, 100);
+	print_close_error(fd2, 100);
 
 	return (0);
 }
