@@ -62,9 +62,6 @@ int main(int argc, char *argv[])
 	if (bytesRead == -1)
 		print_RW_error("Error: Can't read from file ", file_from, 98);
 
-	if (bytesRead == -1)
-		print_RW_error("Error: Can't read from file ", file_from, 98);
-
 	if (close(fd1) == -1)
 		print_close_error(fd1, 100);
 	if (close(fd2) == -1)
