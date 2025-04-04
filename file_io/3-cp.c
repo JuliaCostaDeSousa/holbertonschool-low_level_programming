@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		break;
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
-		print_RW_error("Error", file_from, 99);
+		print_RW_error("Error", file_to, 99);
 	}
 
 	if (bytesRead == -1)
