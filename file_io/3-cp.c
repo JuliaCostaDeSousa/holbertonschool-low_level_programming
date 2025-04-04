@@ -60,20 +60,12 @@ int main(int argc, char *argv[])
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
 		print_RW_error("Error: Can't write to ", file_to, 99);
-		bytesRead = read(fd1, buffer, 1024);
-		if (bytesRead == -1)
-		{
-			print_RW_error("Error: Can't read from file ", file_from, 98);
-		}		
 		else if (bytesRead == 0)
 		break;
+		else
+		bytesRead = read(fd1, buffer, 1024);
 	}
 
-	if (bytesRead == -1)
-	{
-		print_RW_error("Error: Can't read from file ", file_from, 98);
-
-	}
 	if (close(fd1) == -1)
 	print_close_error(fd1, 100);
 	if (close(fd2) == -1)
