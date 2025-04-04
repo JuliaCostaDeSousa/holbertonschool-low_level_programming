@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 {
 	char *file_from, *file_to;
 	char buffer[1024];
-	ssize_t fd1 = 0, fd2 = 0, bytesRead = 0, bytesWrite = 0;
+	ssize_t fd1 = 0, fd2 = 0, bytesRead = 0;
 
 	if (argc != 3)
 	{
@@ -60,11 +60,7 @@ int main(int argc, char *argv[])
 		if (bytesRead == -1)
 		print_RW_error("Error: Can't read from file ", file_from, 98);
 		if (bytesRead != 0)
-		{
-			bytesWrite = write(fd2, buffer, bytesRead);
-			if (bytesWrite == -1)
-			print_RW_error("Error: Can't read from file ", file_from, 98);
-		}
+		write(fd2, buffer, bytesRead);
 	}
 
 	if (close(fd1) == -1)
