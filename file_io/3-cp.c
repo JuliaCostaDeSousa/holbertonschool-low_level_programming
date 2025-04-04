@@ -32,7 +32,8 @@ void print_close_error(int fd, int exit_code)
 int main(int argc, char *argv[])
 {
 	char buffer[1024];
-	ssize_t fd1, fd2, bytesRead, bytesWrite;
+	ssize_t bytesRead, bytesWrite;
+	int fd1, fd2;
 
 	if (argc != 3)
 	{
