@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
-	print_RW_error("Error: Can't read from file ", argv[2], 98);
+	print_RW_error("Error: Can't write to ", argv[2], 99);
 
 	while ((bytesRead > 0))
 	{		
