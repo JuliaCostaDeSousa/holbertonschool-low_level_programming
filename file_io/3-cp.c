@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 {
 	char *file_from, *file_to;
 	char buffer[1024];
-	ssize_t fd1 = 0, fd2 = 0, bytesRead = 0, bytesWrite = 0;
+	ssize_t fd1, fd2, bytesRead, bytesWrite;
 
 	if (argc != 3)
 	{
