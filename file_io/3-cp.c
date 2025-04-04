@@ -31,7 +31,6 @@ void print_close_error(int fd, int exit_code)
  */
 int main(int argc, char *argv[])
 {
-	char *file_from, *file_to;
 	char buffer[1024];
 	ssize_t fd1, fd2, bytesRead, bytesWrite;
 
@@ -41,25 +40,23 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	file_from = argv[1];
-	file_to = argv[2];
-	fd1 = open(file_from, O_RDONLY);
+	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 	{
-		print_RW_error("Error: Can't read from file ", file_from, 98);
+		print_RW_error("Error: Can't read from file ", argv[1], 98);
 	}
 
 	bytesRead = read(fd1, buffer, 1024);
 
-	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
-	print_RW_error("Error: Can't write to ", file_to, 99);
+	print_RW_error("Error: Can't write to ", argv[2], 99);
 
 	while ((bytesRead > 0))
 	{		
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
-		print_RW_error("Error: Can't write to ", file_to, 99);
+		print_RW_error("Error: Can't write to ", argv[2], 99);
 		else if (bytesRead == 0)
 		break;
 		else
