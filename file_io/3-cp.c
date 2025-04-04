@@ -46,7 +46,6 @@ int main(int argc, char *argv[])
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
 	{
-		printf("1 cant read\n");
 		print_RW_error("Error: Can't read from file ", file_from, 98);
 	}
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -58,7 +57,6 @@ int main(int argc, char *argv[])
 		bytesRead = read(fd1, buffer, 1024);
 		if (bytesRead == -1)
 		{
-			printf("2 cant read\n");
 			print_RW_error("Error: Can't read from file ", file_from, 98);
 		}
 		else if (bytesRead == 0)
@@ -70,7 +68,6 @@ int main(int argc, char *argv[])
 
 	if (bytesRead == -1)
 	{
-		printf("3 cant read\n");
 		print_RW_error("Error: Can't read from file ", file_from, 98);
 
 	}
