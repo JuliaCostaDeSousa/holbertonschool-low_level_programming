@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		{
 			bytesWrite = write(fd2, buffer, bytesRead);
 			if (bytesWrite == -1)
-			print_RW_error("Error: Can't write to ", file_to, 98);
+			print_RW_error("Error: Can't read from file ", file_from, 98);
 		}
 	}
 
