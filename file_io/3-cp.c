@@ -49,16 +49,20 @@ int main(int argc, char *argv[])
 	if (fd2 == -1)
 	print_RW_error("Error: Can't write to ", file_to, 99);
 
-	while ((bytesRead = read(fd1, buffer, sizeof(buffer))) > 0)
+	bytesRead = read(fd1, buffer, sizeof(buffer));
+	if (bytesRead > 0)
 	{
-		bytesWrite = write(fd2, buffer, bytesRead);
-		if (bytesWrite == -1)
+		while (bytesRead> 0)
 		{
-			print_RW_error("Error: Can't write to ", file_to, 99);
+			bytesWrite = write(fd2, buffer, bytesRead);
+			if (bytesWrite == -1)
+			{
+				print_RW_error("Error: Can't write to ", file_to, 99);
+			}
+			bytesRead = read(fd1, buffer, sizeof(buffer));
 		}
 	}
-
-	if (bytesRead == -1)
+	else if (bytesRead == -1)
 	{
 		close(fd1);
 		close(fd2);
