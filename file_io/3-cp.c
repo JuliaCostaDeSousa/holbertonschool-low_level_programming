@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	}
 
 	bytesRead = read(fd1, buffer, 1024);
-	if (bytesRead == 0)
+	if (bytesRead == -1)
 	print_RW_error("Error: Can't read from file ", argv[1], 98);
 
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
