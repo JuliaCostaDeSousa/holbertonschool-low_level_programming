@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	ssize_t fd1 = 0, fd2 = 0, bytesRead = 0, bytesWrite = 0;
 
 	if (argc != 3)
-	print_RW_error("Usage: cp file_from file_to\n", "\0", 97);
+	print_RW_error("Usage: cp file_from file_to\n", NULL, 97);
 	file_from = argv[1];
 	file_to = argv[2];
 
