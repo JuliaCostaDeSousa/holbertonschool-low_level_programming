@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 	print_RW_error("Error: Can't read from file ", file_from, 98);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
-	print_RW_error("Error: Can't write to ", file_to, 99);
+	print_RW_error("Error: Can't read from file ", file_from, 98);
 
 	bytesRead = 1;
 	while (bytesRead != 0)
