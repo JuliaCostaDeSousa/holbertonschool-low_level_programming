@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	print_RW_error("Error: Can't write to ", argv[2], 99);
 
 	while ((bytesRead > 0))
-	{		
+	{
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
 		print_RW_error("Error: Can't write to ", argv[2], 99);
