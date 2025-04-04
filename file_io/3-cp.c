@@ -20,7 +20,7 @@ void print_RW_error(char *msg, char *filename, int exit_code)
  */
 void print_close_error(int fd, int exit_code)
 {
-	dprintf(STDERR_FILENO, "Can't close fd %d", fd);
+	dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
 	exit(exit_code);
 }
 
@@ -50,20 +50,11 @@ int main(int argc, char *argv[])
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
-		close(fd1);
+		close(fd2);
 		print_RW_error("Error: Can't write to ", file_to, 99);
 	}
 
-	bytesRead = read(fd1, buffer, 1024);
-	
-	if (bytesRead < 0)
-	{
-		close(fd1);
-		close(fd2);
-		print_RW_error("Error: Can't read from file ", file_from, 98);
-	}
-
-	while (bytesRead > 0)
+	while ((bytesRead = read(fd1, buffer, 1024)) > 0)
 	{
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
@@ -72,6 +63,13 @@ int main(int argc, char *argv[])
 			close(fd2);
 			print_RW_error("Error: Can't write to ", file_to, 99);
 		}
+	}
+
+	if (bytesRead == -1)
+	{
+		close(fd1);
+		close(fd2);
+		print_RW_error("Error: Can't read from file ", file_from, 98);
 	}
 
 	if (close(fd1) == -1)
