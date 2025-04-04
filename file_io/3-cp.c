@@ -58,6 +58,8 @@ int main(int argc, char *argv[])
 		bytesRead = read(fd1, buffer, 1024);
 		if (bytesRead == -1)
 		print_RW_error("Error: Can't read from file ", file_from, 98);
+		else if (bytesRead == 0)
+		break;
 		bytesWrite = write(fd2, buffer, bytesRead);
 		if (bytesWrite == -1)
 		print_RW_error("Error: Can't write to ", file_to, 99);
